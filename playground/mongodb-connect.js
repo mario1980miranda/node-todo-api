@@ -1,5 +1,6 @@
 // MongoDB module V2
-const MongoClient = require('mongodb');
+// const MongoClient = require('mongodb').MongoClient;
+const {MongoClient, ObjectID} = require('mongodb');
 
 MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     if (err) {
@@ -18,8 +19,8 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     // });
 
     db.collection('Users').insertOne({
-        name: 'Mario',
-        age: 37,
+        name: 'Ozzy',
+        age: 68,
         location: 'Curitiba'
     }, (err, result) => {
         if(err){
